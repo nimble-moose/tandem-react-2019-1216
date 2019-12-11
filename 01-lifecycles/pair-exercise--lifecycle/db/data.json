@@ -1,0 +1,128 @@
+{
+  "channels": [
+    {
+      "id": 1,
+      "name": "Dogs"
+    },
+    {
+      "id": 2,
+      "name": "Cats"
+    },
+    {
+      "id": 3,
+      "name": "Rabbits"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "text": "Nisi vel qui dicta dolorem deserunt.",
+      "channelId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "text": "Id adipisci et.",
+      "channelId": 2,
+      "userId": 6
+    },
+    {
+      "id": 3,
+      "text": "Voluptatem quod et et tenetur.",
+      "channelId": 3,
+      "userId": 9
+    },
+    {
+      "id": 4,
+      "text": "Voluptates porro est dolore et labore.",
+      "channelId": 1,
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "text": "Repellat dolorem cupiditate voluptatem repellat.",
+      "channelId": 2,
+      "userId": 4
+    },
+    {
+      "id": 6,
+      "text": "Neque accusantium qui ipsa fugit.",
+      "channelId": 3,
+      "userId": 7
+    },
+    {
+      "id": 7,
+      "text": "Odit mollitia voluptatem soluta cumque et ipsum ipsam.",
+      "channelId": 1,
+      "userId": 3
+    },
+    {
+      "id": 8,
+      "text": "Beatae consequuntur perspiciatis mollitia facilis voluptate beatae nostrum.",
+      "channelId": 2,
+      "userId": 5
+    },
+    {
+      "id": 9,
+      "text": "Eum in rerum at.",
+      "channelId": 3,
+      "userId": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Rex",
+      "avatar": "dog1.png",
+      "bio": "Et est fugiat adipisci. Velit ut sit reiciendis omnis ut explicabo. Ullam iste perspiciatis unde aut voluptatem nemo sed animi. Iusto quia omnis et aut repellendus quia nihil est labore.\n \rMinima earum et. Qui voluptatem est ab beatae nobis molestiae. Voluptas accusantium tenetur ea non delectus.\n \rEos enim quas. Autem laborum fugiat rerum. Reiciendis fuga distinctio mollitia. Modi iure ab aut vel necessitatibus."
+    },
+    {
+      "id": 2,
+      "name": "Fido",
+      "avatar": "dog2.png",
+      "bio": "Qui dicta voluptate eum unde consequatur suscipit veritatis et perspiciatis. Occaecati sunt rerum consectetur et similique iste. Deserunt sunt sapiente temporibus.\n \rQui sint minus occaecati. Illum reprehenderit unde est et blanditiis explicabo. Odio delectus tempore. Possimus consequatur error mollitia distinctio a nihil ipsum adipisci.\n \rIpsa ducimus omnis. Qui nihil veritatis optio iusto sapiente numquam. Aperiam corrupti est voluptas saepe quidem nobis porro et facere. Assumenda maxime quas voluptatum aspernatur sint aut dolor. Voluptas optio ut inventore et dolorem modi eos. Facere quod sapiente impedit excepturi."
+    },
+    {
+      "id": 3,
+      "name": "Bruce",
+      "avatar": "dog3.png",
+      "bio": "Eum rerum nisi earum non voluptates quos. Quasi assumenda eum consequatur aut unde corporis dolor at. Culpa rem reprehenderit ad laudantium provident velit. Ut velit ratione praesentium sed. Nihil quae cum at ut ut doloribus qui sint. Velit voluptas accusamus dolores qui.\n \rEt ab minima natus. Quisquam sequi eligendi dolore reiciendis itaque dignissimos nam id qui. Nisi consequatur et sed accusantium.\n \rQui ducimus nostrum non ut rerum sit. Et et aperiam exercitationem aut. Rerum iure ipsam sunt. Quasi eum ad doloribus hic laudantium quos et sit. Pariatur animi facilis dolorum repudiandae explicabo sunt voluptatem aut porro."
+    },
+    {
+      "id": 4,
+      "name": "Mr. Snuffles",
+      "avatar": "cat1.png",
+      "bio": "Illum odit mollitia hic reprehenderit labore. Autem qui cumque deserunt atque sed. Dicta ea suscipit quaerat quibusdam enim distinctio. Cumque ducimus exercitationem porro ut cum eum temporibus eaque. Ut qui autem inventore ab harum. Doloremque aperiam laudantium minima est commodi velit.\n \rEst voluptas dignissimos laboriosam corporis quisquam autem ut reiciendis. Officia autem omnis aut totam voluptatem quo. Quasi tenetur perspiciatis voluptas voluptatibus ipsa nisi.\n \rNihil molestiae excepturi veniam et cupiditate. Earum molestias quod qui veritatis rerum. Nam est itaque dignissimos. Veritatis corporis repudiandae reprehenderit quo velit."
+    },
+    {
+      "id": 5,
+      "name": "Eddie",
+      "avatar": "cat2.png",
+      "bio": "Sequi aut odit alias reprehenderit. At eos quo a. Sint in sunt nemo aut consequuntur illum ut. Est animi provident laboriosam a nostrum odit. Impedit nemo magnam. Est ea et voluptate aut tenetur excepturi.\n \rFugiat veniam dolore enim perspiciatis error laudantium. Labore sint quia. Provident cupiditate ea ipsam. Quidem reiciendis iure voluptatibus eius necessitatibus minus accusantium nisi. Molestiae laborum ducimus quia numquam mollitia deleniti distinctio.\n \rProvident expedita magnam qui labore doloribus. Praesentium consectetur eum placeat voluptate magnam id nostrum. Quam repellendus praesentium vel magnam ab quis perferendis. Qui odit quae perferendis rem."
+    },
+    {
+      "id": 6,
+      "name": "Zeke",
+      "avatar": "cat3.png",
+      "bio": "Dolores est accusantium et dolores reiciendis est necessitatibus rerum. Quam minima voluptatem. Qui eveniet in cumque ullam. Fuga consequuntur occaecati expedita et ratione alias aut. Ipsum maiores et mollitia eaque sint officiis qui placeat.\n \rSed nihil excepturi quos consequatur nam aliquam dolore beatae. Labore expedita vitae qui. Dolor et nulla reprehenderit aut odit quod dignissimos ab. Vero aut id perferendis ut accusantium assumenda molestias. Voluptates similique reprehenderit dolorem amet ut. Ducimus porro voluptate.\n \rArchitecto aut deleniti magni. Odit ipsum recusandae. Magni a a et corrupti consequuntur in. Delectus dolorum eum vitae voluptatem. Inventore dicta voluptate quia labore. Error perferendis culpa."
+    },
+    {
+      "id": 7,
+      "name": "Bunny Bunny Bo Bunny",
+      "avatar": "rabbit1.png",
+      "bio": "Quia et dignissimos. Voluptatem totam quasi ut autem atque iure labore. Et sapiente ullam omnis consectetur quae. Vitae voluptatem dolore iusto perspiciatis fugit fugit in. Eligendi voluptate ex accusamus esse ullam dolorum molestiae quo.\n \rRepellendus culpa perferendis non quasi quibusdam odio. Inventore est aspernatur eum inventore nesciunt dignissimos nihil est amet. Quibusdam voluptatem fugit illum dolorem quaerat consequuntur sit. Quas dolores voluptatem deleniti. Commodi quo est quasi voluptatem aut.\n \rPossimus eveniet occaecati rerum enim et atque illum. Ut laboriosam voluptas minus architecto repudiandae cumque ex iste. Voluptatum et voluptatem aut vel accusamus."
+    },
+    {
+      "id": 8,
+      "name": "Robby Rabbit",
+      "avatar": "rabbit2.png",
+      "bio": "Voluptas aperiam et ea ipsam doloribus sint similique molestiae. Omnis quae natus ea voluptatem placeat nemo. Nostrum occaecati eum blanditiis ut nam.\n \rCumque molestias ab. Reprehenderit atque cumque harum est aut eum alias ut. Quaerat et id. Vel vel ab corporis placeat officiis aut magni. Exercitationem consequatur sunt saepe expedita praesentium fugiat iusto sunt possimus. Mollitia dolorum inventore illo facilis adipisci suscipit porro.\n \rQuasi facere doloremque totam. Aut reiciendis explicabo et dolorem nostrum nulla quasi ipsa. Facere fuga praesentium velit sed maxime quod dolores. Autem omnis minus quisquam sunt. Recusandae itaque ipsa sunt."
+    },
+    {
+      "id": 9,
+      "name": "Other Bunny",
+      "avatar": "rabbit3.png",
+      "bio": "Corporis aut quae et id ratione totam sed. Voluptas quis asperiores aut et maxime et et qui architecto. Praesentium dolorum ut nobis qui voluptas est odio rerum. Placeat adipisci repellat similique rerum dolores architecto laudantium quia illo.\n \rVoluptatum nisi occaecati. Hic perferendis sed omnis reprehenderit. Ut vel vitae hic adipisci ut quae sit consequatur. Cum autem qui totam. Perferendis ut aliquid saepe ab suscipit.\n \rCorrupti at accusantium. Earum sed natus magnam doloribus accusantium qui reprehenderit animi. Natus et doloribus soluta quos quibusdam numquam non vitae. Occaecati ipsa inventore sunt laboriosam nisi autem explicabo esse. Assumenda dignissimos sint."
+    }
+  ]
+}
