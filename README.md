@@ -15,7 +15,8 @@ Prior to training day, it would be very helpful if all trainees could clone this
 Lectures will be much more effective and we can cover more material if you are able to look over the following pre-reading beforehand.
 
 * [The React Lifecycle Step by Step](https://medium.com/@vmarchesin/the-react-lifecycle-step-by-step-47c0db0bfe73)
-* []
+* [Hooks at a Glance](https://reactjs.org/docs/hooks-overview.html)
+* [Getting Closure on React Hooks](https://www.youtube.com/watch?v=KJP1E-Y-xyo) (Talk by Shawn Wang)
 
 ## Additional Reading
 
@@ -23,3 +24,5 @@ If you have the time and interest to read any of these articles before training,
 
 * [React documentation on Components](https://reactjs.org/docs/react-component.html)
 * [You Probably Don't Need Derived State](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
+* [Tyler McGinnis: Why React Hooks](https://tylermcginnis.com/why-react-hooks/)
+* [MDN Docs on Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
