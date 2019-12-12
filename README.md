@@ -26,3 +26,4 @@ If you have the time and interest to read any of these articles before training,
 * [You Probably Don't Need Derived State](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
 * [Tyler McGinnis: Why React Hooks](https://tylermcginnis.com/why-react-hooks/)
 * [MDN Docs on Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+* [React Docs: Context API](https://reactjs.org/docs/context.html)
