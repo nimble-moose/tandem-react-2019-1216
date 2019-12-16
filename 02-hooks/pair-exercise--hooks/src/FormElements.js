@@ -18,6 +18,12 @@ export const TextOutput = ({ label, value }) => (
   </div>
 )
 
+export const ToggleText = ({ Input=TextInput, Output=TextOutput, editing, label, name, value, onChange}) => {
+  return editing
+  ? <TextInput label={label} name={name} value={value} onChange={onChange} />
+  : <TextOutput label={label} value={value} />
+}
+
 
 const EditButton = ({ onClick }) => (
   <button className="btn btn-primary" onClick={(e) => {e.preventDefault(); onClick()}} >
