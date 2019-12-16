@@ -12,6 +12,17 @@ export default class ChannelMessages extends React.Component {
     this.appendMessage = this.appendMessage.bind(this)
   }
 
+  async componentDidMount() {
+    await this.fetchChannel()
+  }
+
+  async componentDidUpdate(prevProps) {
+    console.log('componentDidUpdate')
+    if (prevProps.channelId !== this.props.channelId) {
+      await this.fetchChannel()
+    }
+  }
+
   async fetchChannel() {
     const url = `http://localhost:3001/channels/${this.props.channelId}/messages?_expand=user`
     const response = await fetch(url)

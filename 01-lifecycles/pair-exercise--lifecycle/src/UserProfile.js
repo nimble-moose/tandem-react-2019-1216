@@ -7,6 +7,10 @@ export default class UserProfile extends React.Component {
     this.state = { user: null }
   }
 
+  async componentDidMount() {
+    await this.fetchUser()
+  }
+
   async fetchUser() {
     const response = await fetch(`http://localhost:3001/users/${this.props.userId}`)
     const user = await response.json()

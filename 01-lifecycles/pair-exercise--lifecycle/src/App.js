@@ -19,6 +19,10 @@ class App extends React.Component {
     this.deselectUser = this.deselectUser.bind(this)
   }
 
+  async componentDidMount() {
+    await this.fetchChannelList()
+  }
+
   async fetchChannelList() {
     const response = await fetch('http://localhost:3001/channels')
     const channels = await response.json()
