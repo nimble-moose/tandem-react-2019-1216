@@ -131,4 +131,42 @@ class FormClass extends React.Component {
   }
 }
 
-export default FormClass
+
+const FormFunction = (props) => {
+  const [ editing, setEditing ] = useState(false)
+  const [ inFlight, setInFlight] = useState(false)
+  const currentFieldValues = {}
+
+  return (
+    <form style={{ margin: "1em"}}>
+      <p className="text-right">
+        <EditingToggle tabIndex="1"
+         editing={editing}
+         toggle={() => {}}
+         persist={() => {}}
+         revert={() => {}} />
+      </p>
+
+      { FIELDS.map((fieldDef, idx) => {
+
+        // fieldDef.onChange = (e) => this.setFieldValue(e.target.name, e.target.value)
+        fieldDef.onChange = () => {}
+
+        return (
+         <ToggleText
+          key={idx}
+          editable={editing}
+          fieldDefinition={fieldDef}
+          value={currentFieldValues[fieldDef.name]}
+         />
+        )}
+      )}
+
+      {inFlight &&
+        <p className="text-center alert alert-info">Request In Flight</p>
+      }
+    </form>
+  )
+}
+
+export default FormFunction
