@@ -1,18 +1,19 @@
 import React, {useState} from 'react';
+import useToggle from './hooks/useToggle'
 import './App.css';
 
 function App() {
 
-  const [ isOpen, setIsOpen ] = useState(false)
+  const [ openOrClosed, toggleOpen ] = useToggle(["BEEF", "CHICKEN", "VEGETARIAN"])
 
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={() => setIsOpen(!isOpen)}>
+        <button onClick={toggleOpen}>
           Toggle Me!
         </button>
 
-        <p>{ isOpen ? "OPEN" : "CLOSED" }</p>
+        <p>{ openOrClosed }</p>
       </header>
     </div>
   );
