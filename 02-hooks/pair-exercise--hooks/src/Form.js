@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TextInput, TextOutput, EditingToggle } from './FormElements'
+import { ToggleText, EditingToggle } from './FormElements'
 
 
 // In reality, these would probably be passed in as props, but
@@ -110,21 +110,16 @@ class FormClass extends React.Component {
         </p>
 
         { FIELDS.map((fieldDef, idx) => {
+
+          fieldDef.onChange = (e) => this.setFieldValue(e.target.name, e.target.value)
+
           return (
-            editing
-            ? <TextInput
-               key={idx}
-               editable={editing}
-               label={fieldDef.label}
-               name={fieldDef.name}
-               value={currentFieldValues[fieldDef.name]}
-               onChange={(e) => this.setFieldValue(e.target.name, e.target.value)}
-              />
-            : <TextOutput
-               key={idx}
-               label={fieldDef.label}
-               value={currentFieldValues[fieldDef.name]}
-              />
+           <ToggleText
+            key={idx}
+            editable={editing}
+            fieldDefinition={fieldDef}
+            value={currentFieldValues[fieldDef.name]}
+           />
           )}
         )}
 

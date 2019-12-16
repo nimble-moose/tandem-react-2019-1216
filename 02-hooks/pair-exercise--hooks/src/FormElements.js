@@ -18,10 +18,10 @@ export const TextOutput = ({ label, value }) => (
   </div>
 )
 
-export const ToggleText = ({ Input=TextInput, Output=TextOutput, editing, label, name, value, onChange}) => {
-  return editing
-  ? <TextInput label={label} name={name} value={value} onChange={onChange} />
-  : <TextOutput label={label} value={value} />
+export const ToggleText = ({ Input=TextInput, Output=TextOutput, editable, fieldDefinition, value}) => {
+  return editable
+  ? <TextInput label={fieldDefinition.label} name={fieldDefinition.name} value={value} onChange={fieldDefinition.onChange} />
+  : <TextOutput label={fieldDefinition.label} value={value} />
 }
 
 
