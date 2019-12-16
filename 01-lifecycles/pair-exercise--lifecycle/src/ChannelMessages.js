@@ -1,6 +1,11 @@
 import React from 'react'
 import Message from './Message'
 
+import { subscribe } from './subscriptions'
+
+// const subscription = subscribe(channelId)
+// subscription.on('message', (msg) => ...do something ))
+
 export default class ChannelMessages extends React.Component {
 
   constructor(props) {
