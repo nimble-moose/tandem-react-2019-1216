@@ -19,13 +19,22 @@ export default class ChannelMessages extends React.Component {
 
   async componentDidMount() {
     await this.fetchChannel()
+    this.subscription = subscribe(this.props.channelId)
+    this.subscription.on('message', this.appendMessage)
   }
 
   async componentDidUpdate(prevProps) {
     console.log('componentDidUpdate')
     if (prevProps.channelId !== this.props.channelId) {
       await this.fetchChannel()
+      this.subscription.off('message', this.appendMessage)
+      this.subscription = subscribe(this.props.channelId)
+      this.subscription.on('message', this.appendMessage)
     }
+  }
+
+  async componentWillUnmount() {
+    this.subscription.off('message', this.appendMessage)
   }
 
   async fetchChannel() {
