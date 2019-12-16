@@ -24,8 +24,14 @@ export default class ChannelMessages extends React.Component {
     this.subscription.on('message', this.appendMessage)
   }
 
-  async componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate')
+  getSnapshotBeforeUpdate() {
+    return this.windowRef.current
+      ? this.windowRef.current.scrollHeight
+      : 0
+  }
+
+  async componentDidUpdate(prevProps, prevState, prevHeight) {
+    console.log('componentDidUpdate', prevHeight)
     if (prevProps.channelId !== this.props.channelId) {
       await this.fetchChannel()
       this.subscription.off('message', this.appendMessage)
@@ -34,7 +40,13 @@ export default class ChannelMessages extends React.Component {
     }
 
     if (prevState.messages.length < this.state.messages.length) {
-      this.scrollToBottom()
+
+      const list = this.windowRef.current
+      const scrolledUp = list.scrollTop < (prevHeight - list.clientHeight)
+
+      if (!scrolledUp) {
+        this.scrollToBottom()
+      }
     }
   }
 
