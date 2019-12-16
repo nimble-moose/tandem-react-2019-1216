@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useToggle from './hooks/useToggle'
+import useForm from './hooks/useForm'
 import { ToggleText, EditingToggle } from './FormElements'
 
 
@@ -135,11 +136,8 @@ class FormClass extends React.Component {
 
 const FormFunction = (props) => {
   const [ editing, toggleEditing ] = useToggle(false)
-  const [ currentFieldValues, setFieldValues ] = useState(FIELDS.map(field => field.value))
-
-  // const { fields, values } = useForm(FIELDS)
-
-  const [ inFlight, setInFlight] = useState(false)
+  const { fields, values } = useForm(FIELDS)
+  const [ inFlight, setInFlight ] = useState(false)
 
   return (
     <form style={{ margin: "1em"}}>
@@ -151,17 +149,13 @@ const FormFunction = (props) => {
          revert={() => {}} />
       </p>
 
-      { FIELDS.map((fieldDef, idx) => {
-
-        // fieldDef.onChange = (e) => this.setFieldValue(e.target.name, e.target.value)
-        // fieldDef.onChange = () => {}
-
+      { fields.map((fieldDef, idx) => {
         return (
          <ToggleText
           key={idx}
           editable={editing}
           fieldDefinition={fieldDef}
-          value={currentFieldValues[idx]}
+          value={values[idx]}
          />
         )}
       )}
