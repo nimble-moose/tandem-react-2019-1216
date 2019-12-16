@@ -14,5 +14,5 @@ export default (initialFields) => {
     onChange: (e) => setValueByIndex(idx, e.target.value)
   }))
 
-  return { fields, values }
+  return { fields, values, setValues }
 }

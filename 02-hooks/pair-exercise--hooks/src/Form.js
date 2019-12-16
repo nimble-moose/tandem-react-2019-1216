@@ -136,7 +136,14 @@ class FormClass extends React.Component {
 
 const FormFunction = (props) => {
   const [ editing, toggleEditing ] = useToggle(false)
-  const { fields, values } = useForm(FIELDS)
+  const { fields, values, setValues } = useForm(FIELDS)
+
+  const [ snapshot ] = useRevert({
+    condition: editing,
+    values: values
+  })
+
+
   const [ inFlight, setInFlight ] = useState(false)
 
   return (
@@ -146,7 +153,7 @@ const FormFunction = (props) => {
          editing={editing}
          toggle={toggleEditing}
          persist={() => {}}
-         revert={() => {}} />
+         revert={() => setValues(snapshot)} />
       </p>
 
       { fields.map((fieldDef, idx) => {
