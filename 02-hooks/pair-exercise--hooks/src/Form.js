@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import useToggle from './hooks/useToggle'
 import { ToggleText, EditingToggle } from './FormElements'
 
 
@@ -6,9 +7,9 @@ import { ToggleText, EditingToggle } from './FormElements'
 // keeping them here makes the exercise easier to reason about
 const RESOURCE_URL="http://localhost:3001/users/1"
 const FIELDS=[
-  { label: "First Name", name: "firstName", value: '' },
-  { label: "Last Name", name: "lastName", value: '' },
-  { label: "Email", name: "email", value: '' },
+  { label: "First Name", name: "firstName", value: 'Ben' },
+  { label: "Last Name", name: "lastName", value: 'Wilhelm' },
+  { label: "Email", name: "email", value: 'benjamin.m.wilhelm@gmail.com' },
 ]
 
 class FormClass extends React.Component {
@@ -133,16 +134,19 @@ class FormClass extends React.Component {
 
 
 const FormFunction = (props) => {
-  const [ editing, setEditing ] = useState(false)
+  const [ editing, toggleEditing ] = useToggle(false)
+  const [ currentFieldValues, setFieldValues ] = useState(FIELDS.map(field => field.value))
+
+  // const { fields, values } = useForm(FIELDS)
+
   const [ inFlight, setInFlight] = useState(false)
-  const currentFieldValues = {}
 
   return (
     <form style={{ margin: "1em"}}>
       <p className="text-right">
         <EditingToggle tabIndex="1"
          editing={editing}
-         toggle={() => {}}
+         toggle={toggleEditing}
          persist={() => {}}
          revert={() => {}} />
       </p>
@@ -150,14 +154,14 @@ const FormFunction = (props) => {
       { FIELDS.map((fieldDef, idx) => {
 
         // fieldDef.onChange = (e) => this.setFieldValue(e.target.name, e.target.value)
-        fieldDef.onChange = () => {}
+        // fieldDef.onChange = () => {}
 
         return (
          <ToggleText
           key={idx}
           editable={editing}
           fieldDefinition={fieldDef}
-          value={currentFieldValues[fieldDef.name]}
+          value={currentFieldValues[idx]}
          />
         )}
       )}
