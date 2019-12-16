@@ -15,6 +15,7 @@ export default class ChannelMessages extends React.Component {
     }
 
     this.appendMessage = this.appendMessage.bind(this)
+    this.windowRef = React.createRef()
   }
 
   async componentDidMount() {
@@ -23,13 +24,17 @@ export default class ChannelMessages extends React.Component {
     this.subscription.on('message', this.appendMessage)
   }
 
-  async componentDidUpdate(prevProps) {
+  async componentDidUpdate(prevProps, prevState) {
     console.log('componentDidUpdate')
     if (prevProps.channelId !== this.props.channelId) {
       await this.fetchChannel()
       this.subscription.off('message', this.appendMessage)
       this.subscription = subscribe(this.props.channelId)
       this.subscription.on('message', this.appendMessage)
+    }
+
+    if (prevState.messages.length < this.state.messages.length) {
+      this.scrollToBottom()
     }
   }
 
@@ -49,13 +54,19 @@ export default class ChannelMessages extends React.Component {
     this.setState({ messages })
   }
 
+
+  scrollToBottom() {
+    const list = this.windowRef.current
+    list.scrollTop = list.scrollHeight
+  }
+
   render () {
     const { messages } = this.state
     if (!messages || !messages.length)
       return <p>Loading...</p>
 
     return (
-      <div id="channel_messages">
+      <div id="channel_messages" ref={this.windowRef}>
         {messages.map(message => <Message key={message.id} message={message} onUserSelect={this.props.onUserSelect} />)}
       </div>
     )
