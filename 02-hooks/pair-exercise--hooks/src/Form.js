@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import useToggle from './hooks/useToggle'
 import useForm from './hooks/useForm'
+import useRevert from './hooks/useRevert'
+import useCrud from './hooks/useCrud'
 import { ToggleText, EditingToggle } from './FormElements'
 
 
@@ -12,6 +14,7 @@ const FIELDS=[
   { label: "Last Name", name: "lastName", value: 'Wilhelm' },
   { label: "Email", name: "email", value: 'benjamin.m.wilhelm@gmail.com' },
 ]
+
 
 class FormClass extends React.Component {
 
@@ -136,11 +139,16 @@ class FormClass extends React.Component {
 
 const FormFunction = (props) => {
   const [ editing, toggleEditing ] = useToggle(false)
-  const { fields, values, setValues } = useForm(FIELDS)
+  const { fields, values, setValues, setValuesFromObject } = useForm(FIELDS)
 
   const [ snapshot ] = useRevert({
     condition: editing,
     values: values
+  })
+
+  const updateResource = useCrud({
+    resourceUrl: RESOURCE_URL,
+    afterFetch: setValues
   })
 
 
@@ -152,7 +160,7 @@ const FormFunction = (props) => {
         <EditingToggle tabIndex="1"
          editing={editing}
          toggle={toggleEditing}
-         persist={() => {}}
+         persist={() => updateResource(values)}
          revert={() => setValues(snapshot)} />
       </p>
 
@@ -162,7 +170,7 @@ const FormFunction = (props) => {
           key={idx}
           editable={editing}
           fieldDefinition={fieldDef}
-          value={values[idx]}
+          value={values[fieldDef.name]}
          />
         )}
       )}

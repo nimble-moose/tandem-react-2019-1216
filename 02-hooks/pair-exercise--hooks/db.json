@@ -1,10 +1,13 @@
 {
   "users": [
     {
+      "0": "Ben",
+      "1": null,
+      "2": null,
       "id": 1,
-      "firstName": "Ben",
       "lastName": "Wilhelm",
-      "email": "ben.wilhelm@nimblemoose.com"
+      "email": "ben.wilhelm@nimblemoose.com",
+      "firstName": "Ben"
     }
   ]
 }
